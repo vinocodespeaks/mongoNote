@@ -1,4 +1,2 @@
 # mongoNote
-# mongo
-# candid-3.0
-# candid-3.0
+The web app for understanding the mongoDB with node js with passport js 
