@@ -1,0 +1,22 @@
+{{#if notes.length}}
+<h1 class="text-primary">All Notes</h1>
+{{/if}}
+{{#each notes}}
+
+<div class="card mb-2">
+    <div class="card-header">
+        {{title}}
+    </div>
+    <div class="card-body">
+        {{details}}
+    </div>
+   <a class="btn btn-dark btn-block mb-2" href="/note/edit/{{id}}">Edit</a>
+   <form method="post" action="/notes/{{id}}?_method=DELETE">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" class="btn btn-danger btn-block" value="Delete">
+    </form>
+
+</div>
+{{else}}
+  <p>there is no notes </p>
+{{/each}}
